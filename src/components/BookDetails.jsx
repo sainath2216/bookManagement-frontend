@@ -8,7 +8,7 @@ const BookDetails = () => {
     const [error, setError] = useState(false);
   
     useEffect(() => {
-      fetch(`http://localhost:5000/api/books/${id}`)
+      fetch(`https://book-management-1szm.onrender.com/api/books/${id}`)
         .then((response) => {
           if (!response.ok) {
             throw new Error(`Error: ${response.status} - ${response.statusText}`);

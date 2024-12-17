@@ -8,15 +8,14 @@ const Home = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const booksPerPage = 5; // Number of books per page
 
-  // Fetch books from the API on component mount
   useEffect(() => {
-    fetch("http://localhost:5000/api/books")
+    fetch("https://book-management-1szm.onrender.com/api/books")
       .then((response) => response.json())
       .then((data) => setBooks(data))
       .catch((error) => console.error("Error fetching books:", error));
   }, []);
 
-  // Filter books based on the search term
+
   useEffect(() => {
     setFilteredBooks(
       books.filter((book) =>
@@ -25,7 +24,6 @@ const Home = () => {
     );
   }, [searchTerm, books]);
 
-  // Pagination: Calculate the books to display on the current page
   const indexOfLastBook = currentPage * booksPerPage;
   const indexOfFirstBook = indexOfLastBook - booksPerPage;
   const currentBooks = filteredBooks.slice(indexOfFirstBook, indexOfLastBook);
@@ -56,7 +54,7 @@ const Home = () => {
         />
       </div>
 
-      {/* Book List */}
+      
       <div className="book-list-container">
         {currentBooks.length > 0 ? (
           <ul className="book-list">
@@ -79,7 +77,6 @@ const Home = () => {
         )}
       </div>
 
-      {/* Pagination */}
       <div className="pagination">
         <button
           onClick={() => handlePageChange(currentPage - 1)}

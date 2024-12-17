@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
-import BookList from './components/BookList';
+import BookList from './components/Booklist';
 import BookDetails from './components/BookDetails';
 import AddEditBook from './components/AddEditBook';
 import Navbar from './components/Navbar';

@@ -9,7 +9,7 @@ const Home = () => {
   const booksPerPage = 5; // Number of books per page
 
   useEffect(() => {
-    fetch("https://book-management-1szm.onrender.com/api/books")
+    fetch("http://localhost:5000/api/books")
       .then((response) => response.json())
       .then((data) => setBooks(data))
       .catch((error) => console.error("Error fetching books:", error));

@@ -11,7 +11,7 @@ const BookList = () => {
 
   const fetchBooks = () => {
     // Fetch all books from the backend
-    fetch("https://book-management-1szm.onrender.com/api/books")
+    fetch("http://localhost:5000/api/books")
       .then((response) => response.json())
       .then((data) => setBooks(data))
       .catch((error) => console.error("Error fetching books:", error));
@@ -19,7 +19,7 @@ const BookList = () => {
 
   const handleDelete = (id) => {
     if (window.confirm("Are you sure you want to delete this book?")) {
-      fetch(`https://book-management-1szm.onrender.com/api/books/${id}`, {
+      fetch(`http://localhost:5000/api/books/${id}`, {
         method: "DELETE",
       })
         .then((response) => {

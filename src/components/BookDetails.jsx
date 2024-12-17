@@ -1,4 +1,3 @@
-// 
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -9,7 +8,7 @@ const BookDetails = () => {
     const [error, setError] = useState(false);
   
     useEffect(() => {
-      fetch(`https://book-management-1szm.onrender.com/api/books/${id}`)
+      fetch(`http://localhost:5000/api/books/${id}`)
         .then((response) => {
           if (!response.ok) {
             throw new Error(`Error: ${response.status} - ${response.statusText}`);
@@ -42,7 +41,7 @@ const BookDetails = () => {
           <strong>Published Date:</strong> {book.PublishedDate}
         </p>
       </div>
-    ); 
+    );
   };
   
   export default BookDetails;

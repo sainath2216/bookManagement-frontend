@@ -15,7 +15,7 @@ const AddEditBook = () => {
 
   useEffect(() => {
     if (id) {
-      fetch(`https://book-management-1szm.onrender.com/api/books/${id}`)
+      fetch(`http://localhost:5000/api/books/${id}`)
         .then((response) => response.json())
         .then((data) => setBook(data))
         .catch((error) => console.error("Error fetching book data:", error));
@@ -37,8 +37,8 @@ const AddEditBook = () => {
 
     const method = id ? "PUT" : "POST";
     const url = id
-      ? `https://book-management-1szm.onrender.com/api/books/${id}`
-      : "https://book-management-1szm.onrender.com/api/books";
+      ? `http://localhost:5000/api/books/${id}`
+      : "http://localhost:5000/api/books";
 
     fetch(url, {
       method,

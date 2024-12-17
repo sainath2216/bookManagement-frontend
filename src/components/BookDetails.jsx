@@ -1,3 +1,4 @@
+// 
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -41,7 +42,7 @@ const BookDetails = () => {
           <strong>Published Date:</strong> {book.PublishedDate}
         </p>
       </div>
-    );
+    ); 
   };
   
   export default BookDetails;

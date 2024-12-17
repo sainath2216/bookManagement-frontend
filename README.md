@@ -1,4 +1,11 @@
 # Book Management Application
+<details>
+  <summary>Reference Image </summary>
+  
+  ![prudent](https://github.com/user-attachments/assets/5e76ee53-031e-4cb2-a568-a7533abffe75)
+
+</details>
+
 
 ### Set Up Instructions
 
